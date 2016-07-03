@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="pluginmain.cpp" />
+    <ClCompile Include="py.cpp" />
+    <ClCompile Include="stringutils.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pluginmain.h" />
+    <ClInclude Include="pluginsdk\bridgemain.h" />
+    <ClInclude Include="pluginsdk\capstone\arm.h" />
+    <ClInclude Include="pluginsdk\capstone\arm64.h" />
+    <ClInclude Include="pluginsdk\capstone\capstone.h" />
+    <ClInclude Include="pluginsdk\capstone\mips.h" />
+    <ClInclude Include="pluginsdk\capstone\platform.h" />
+    <ClInclude Include="pluginsdk\capstone\ppc.h" />
+    <ClInclude Include="pluginsdk\capstone\sparc.h" />
+    <ClInclude Include="pluginsdk\capstone\systemz.h" />
+    <ClInclude Include="pluginsdk\capstone\x86.h" />
+    <ClInclude Include="pluginsdk\capstone\xcore.h" />
+    <ClInclude Include="pluginsdk\dbghelp\dbghelp.h" />
+    <ClInclude Include="pluginsdk\DeviceNameResolver\DeviceNameResolver.h" />
+    <ClInclude Include="pluginsdk\jansson\jansson.h" />
+    <ClInclude Include="pluginsdk\jansson\jansson_config.h" />
+    <ClInclude Include="pluginsdk\jansson\jansson_x64dbg.h" />
+    <ClInclude Include="pluginsdk\lz4\lz4.h" />
+    <ClInclude Include="pluginsdk\lz4\lz4file.h" />
+    <ClInclude Include="pluginsdk\lz4\lz4hc.h" />
+    <ClInclude Include="pluginsdk\TitanEngine\TitanEngine.h" />
+    <ClInclude Include="pluginsdk\XEDParse\XEDParse.h" />
+    <ClInclude Include="pluginsdk\yara\yara.h" />
+    <ClInclude Include="pluginsdk\yara\yara\ahocorasick.h" />
+    <ClInclude Include="pluginsdk\yara\yara\arena.h" />
+    <ClInclude Include="pluginsdk\yara\yara\atoms.h" />
+    <ClInclude Include="pluginsdk\yara\yara\compiler.h" />
+    <ClInclude Include="pluginsdk\yara\yara\elf.h" />
+    <ClInclude Include="pluginsdk\yara\yara\error.h" />
+    <ClInclude Include="pluginsdk\yara\yara\exec.h" />
+    <ClInclude Include="pluginsdk\yara\yara\exefiles.h" />
+    <ClInclude Include="pluginsdk\yara\yara\filemap.h" />
+    <ClInclude Include="pluginsdk\yara\yara\globals.h" />
+    <ClInclude Include="pluginsdk\yara\yara\hash.h" />
+    <ClInclude Include="pluginsdk\yara\yara\hex_lexer.h" />
+    <ClInclude Include="pluginsdk\yara\yara\lexer.h" />
+    <ClInclude Include="pluginsdk\yara\yara\libyara.h" />
+    <ClInclude Include="pluginsdk\yara\yara\limits.h" />
+    <ClInclude Include="pluginsdk\yara\yara\mem.h" />
+    <ClInclude Include="pluginsdk\yara\yara\modules.h" />
+    <ClInclude Include="pluginsdk\yara\yara\object.h" />
+    <ClInclude Include="pluginsdk\yara\yara\parser.h" />
+    <ClInclude Include="pluginsdk\yara\yara\pe.h" />
+    <ClInclude Include="pluginsdk\yara\yara\proc.h" />
+    <ClInclude Include="pluginsdk\yara\yara\re.h" />
+    <ClInclude Include="pluginsdk\yara\yara\re_lexer.h" />
+    <ClInclude Include="pluginsdk\yara\yara\rules.h" />
+    <ClInclude Include="pluginsdk\yara\yara\scan.h" />
+    <ClInclude Include="pluginsdk\yara\yara\sizedstr.h" />
+    <ClInclude Include="pluginsdk\yara\yara\strutils.h" />
+    <ClInclude Include="pluginsdk\yara\yara\types.h" />
+    <ClInclude Include="pluginsdk\yara\yara\utils.h" />
+    <ClInclude Include="pluginsdk\_dbgfunctions.h" />
+    <ClInclude Include="pluginsdk\_plugins.h" />
+    <ClInclude Include="pluginsdk\_plugin_types.h" />
+    <ClInclude Include="pluginsdk\_scriptapi.h" />
+    <ClInclude Include="pluginsdk\_scriptapi_debug.h" />
+    <ClInclude Include="pluginsdk\_scriptapi_gui.h" />
+    <ClInclude Include="pluginsdk\_scriptapi_memory.h" />
+    <ClInclude Include="pluginsdk\_scriptapi_module.h" />
+    <ClInclude Include="pluginsdk\_scriptapi_pattern.h" />
+    <ClInclude Include="pluginsdk\_scriptapi_register.h" />
+    <ClInclude Include="py.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="stringutils.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="x64dbg-python-template.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\python.png" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <Keyword>Win32Proj</Keyword>
+    <ProjectName>x64dbg-python-plugin-template</ProjectName>
+    <ProjectGuid>{E7BA66E1-677E-D937-AC50-73AB6ADA89E0}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)plugins\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+    <TargetName>x64dbg_Editor</TargetName>
+    <TargetExt>.dp32</TargetExt>
+    <IncludePath>$(Python27x86)\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(Python27x86)\libs;$(LibraryPath)</LibraryPath>
+    <PostBuildEventUseInBuild>false</PostBuildEventUseInBuild>
+    <PreBuildEventUseInBuild>false</PreBuildEventUseInBuild>
+    <PreLinkEventUseInBuild>false</PreLinkEventUseInBuild>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)plugins\</OutDir>
+    <TargetName>x64dbg-editor</TargetName>
+    <TargetExt>.dp64</TargetExt>
+    <IncludePath>$(Python27x64)\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(Python27x64)\libs;$(LibraryPath)</LibraryPath>
+    <PostBuildEventUseInBuild>false</PostBuildEventUseInBuild>
+    <PreLinkEventUseInBuild>false</PreLinkEventUseInBuild>
+    <PreBuildEventUseInBuild>false</PreBuildEventUseInBuild>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;_WINDOWS;_USRDLL;X64_DBG_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalIncludeDirectories>C:\Python27\include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>psapi.lib;pluginsdk\x32dbg.lib;pluginsdk\x32bridge.lib;pluginsdk\TitanEngine\TitanEngine_x86.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Python27\Libs</AdditionalLibraryDirectories>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+    </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <PreBuildEvent>
+      <Message>
+      </Message>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;_WINDOWS;_USRDLL;X64_DBG_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalIncludeDirectories>C:\x64dbg\x64\plugins\pyx64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>psapi.lib;pluginsdk\x64dbg.lib;pluginsdk\x64bridge.lib;pluginsdk\TitanEngine\TitanEngine_x64.lib;C:\x64dbg\x64\plugins\pyx64\libs\python27.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+      <Message>
+      </Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
