@@ -9,7 +9,7 @@ This is a template for compiling x64dbgpy plugins.
 simply edit the temnplate after your needs in the code.
 Places that needs modification is quoted in the code.
 the compiled plugin loader calls your main script, so put 
-the compiled plugin in x64/c32/plugins folder and main python script in 
+the compiled plugin *.dp32/*.dp64 in x64/c32/plugins folder and main python script in 
 plugins\\pythonapp\\main.py
 
 Also change outputfile name in project setting in VS2013
@@ -37,7 +37,8 @@ python 2.7.x x86/x64(depend on your needs)
 
 Examble of a finished plugin
 
-Important
+
+**Important**
 
 If you do os.chdir() in python script , remember to set x86/x64 root dir , and set it back to root before exiting script or it will be hard to find the plugin again
 
@@ -51,6 +52,10 @@ bob```
 then end of script
 
 `os.chdir(dn)`
+
+**Example Plugin**
+
+https://github.com/techbliss/x64dbg_updater
 
 **Thx**
 
