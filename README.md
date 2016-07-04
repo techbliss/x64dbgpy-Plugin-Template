@@ -5,6 +5,7 @@ This is a template for compiling x64dbgpy plugins.
 
 
 **Howto**
+
 simply edit the temnplate after your needs in the code.
 Places that needs modification is quoted in the code.
 the compiled plugin loader calls your main script, so put 
@@ -23,4 +24,11 @@ static void Editor() // function to call main python app file
 }
 `
 
-Use vs2013 same as x64dbg
+**Needed**
+
+[https://github.com/x64dbg/x64dbgpy]()
+
+Use vs2013 same as x64dbg to avoid runtime error.
+
+Examble of a finished plugin
+
