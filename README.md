@@ -37,4 +37,20 @@ python 2.7.x x86/x64(depend on your needs)
 
 Examble of a finished plugin
 
+Important
+
+If you do os.chdir() in python script , remember to set x86/x64 root dir , and set it back to root before exiting script or it will be hard to find the plugin again
+
+Examble
+
+`sys.path.insert(0, os.getcwd() + r'\\plugins\\Updater')
+dn = os.getcwd()
+bob = os.chdir(os.getcwd() + r'\\plugins\\Updater')
+bob`
+
+then end of script
+
+`os.chdir(dn)`
+
+
 
