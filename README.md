@@ -23,7 +23,7 @@ static void Editor() // function to call main python app file
 {
     wchar_t szFileName[MAX_PATH] = {0};
 	char szDir[256]; GetCurrentDirectoryA(256,szDir); _plugin_logputs(szDir);
-    ExecutePythonScript(L"plugins\\X64Dbg_editor\\Editor_x64dbg.py"); // execution of main file location
+    ExecutePythonScript(L"plugins\\pythonappfolder\\Main.py"); // execution of main file location
 }
 `
 
