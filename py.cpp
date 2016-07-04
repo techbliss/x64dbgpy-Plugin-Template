@@ -18,7 +18,7 @@
 PyObject* pModule, *pEventObject;
 HINSTANCE hInst;
 
-static void Editor();
+static void Editor(); //edit this
 
 extern "C" __declspec(dllexport) void CBMENUENTRY(CBTYPE cbType, PLUG_CB_MENUENTRY* info)
 {
