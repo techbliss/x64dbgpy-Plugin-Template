@@ -43,10 +43,10 @@ If you do os.chdir() in python script , remember to set x86/x64 root dir , and s
 
 Examble
 
-`sys.path.insert(0, os.getcwd() + r'\\plugins\\Updater')
+```sys.path.insert(0, os.getcwd() + r'\\plugins\\Updater')
 dn = os.getcwd()
 bob = os.chdir(os.getcwd() + r'\\plugins\\Updater')
-bob`
+bob```
 
 then end of script
 
