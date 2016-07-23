@@ -11,7 +11,7 @@ enum
 // editor
 static void Template() // function to call main python app file
 {
-    ExecutePythonScriptW(L"plugins\\x64dbgpy_plugins\\x64dbgpy-template.py"); // execution of main file location (relative to x64dbg.exe)
+    ExecutePythonScriptW(L"plugins\\x64dbgpy-template\\x64dbgpy-template.py"); // execution of main file location (relative to x64dbg.exe)
 }
 
 extern "C" __declspec(dllexport) void CBMENUENTRY(CBTYPE cbType, PLUG_CB_MENUENTRY* info)
