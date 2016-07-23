@@ -29,7 +29,7 @@ static void Editor() // function to call main python app file
 
 **Needed**
 
-[https://github.com/x64dbg/x64dbgpy]()
+https://github.com/x64dbg/x64dbgpy
 
 Use vs2013 same as x64dbg to avoid runtime error.
 
