@@ -15,9 +15,7 @@ extern int hMenu;
 extern int hMenuDisasm;
 extern int hMenuDump;
 extern int hMenuStack;
-
-#define plugin_name "x64dbg-editor" /// set plugin name
-#define plugin_version 1
+extern HINSTANCE hInst;
 
 #ifdef __cplusplus
 extern "C"
