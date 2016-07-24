@@ -6,7 +6,7 @@ This is a template for compiling x64dbgpy plugins.
 
 ## Howto
 
-1. Put the Python files you want to ship with your plugin in the `x64dbgpy_plugins` directory
+1. Put the Python files you want to ship with your plugin in the `plugins\Python_app_folder` directory
 2. Modify `plugin.h` and `plugin.cpp` to work with your plugin
 3. Rename the project file from `x64dbgpy-template` to something else to change the output filename
 3. Run `release.bat`

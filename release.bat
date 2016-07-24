@@ -1,6 +1,7 @@
 @echo off
-rmdir /S /Q release
-xcopy x64dbgpy_plugins release\x32\plugins\* /S /Y
-xcopy x64dbgpy_plugins release\x64\plugins\* /S /Y
-copy bin\x32\*.dp32 release\x32\plugins\
-copy bin\x64\*.dp64 release\x64\plugins\
+mkdir %~dp0\release\x32\plugins
+mkdir %~dp0\release\x64\plugins
+xcopy /E /Y %~dp0\plugins %~dp0\release\x32\plugins
+xcopy /E /Y %~dp0\plugins %~dp0\release\x64\plugins
+XCOPY /E /Y %~dp0\bin\x32\*.dp32 %~dp0\release\x32\*
+XCOPY /E /Y %~dp0\bin\x64\*.dp64 %~dp0\release\x64\*
