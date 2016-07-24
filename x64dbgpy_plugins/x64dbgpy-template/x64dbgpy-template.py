@@ -1,0 +1,1 @@
+print 'This is just a template, do cool stuff here...'
