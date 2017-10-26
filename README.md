@@ -21,7 +21,6 @@ https://github.com/x64dbg/x64dbgpy
 https://github.com/techbliss/x64dbg_updater
 
 ## Thx
-
 Tomer Zait
 
 
